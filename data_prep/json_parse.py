@@ -24,7 +24,7 @@ def json_prep():
             df_org (pd.DataFrame): Non-parsed dataframe with all original components
     """
 
-    dir = 'data\\'
+    dir = ''
 
     with open(dir+'nyc_geo.json') as json_data:
         data_json = json.load(json_data)
