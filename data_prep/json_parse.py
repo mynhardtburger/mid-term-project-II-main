@@ -31,7 +31,7 @@ def json_prep():
 
     df_org = pd.json_normalize(data_json['features'])
 
-    lat_long = pd.DataFrame(df_org["geometry.coordinates"].to_list(), columns=['latitude', 'longitude'])
+    lat_long = pd.DataFrame(df_org["geometry.coordinates"].to_list(), columns=['longitude', 'latitude'])
     df_nyc = pd.merge(df_org[['properties.borough', 'properties.name']], lat_long, left_index=True, right_index=True)
     df_nyc = df_nyc.rename(columns={'properties.borough': 'borough', 'properties.name': 'neighbourhood'})
 
