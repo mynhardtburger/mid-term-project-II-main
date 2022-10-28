@@ -15,7 +15,9 @@ This is a survey which is done every 3 years covering a sample of occupied build
 Various features were considered. Opinion responses from the residents on their neihborhood, the affordability of their housing and factual building age data provided the most interpretable clustering signals while avoiding economic and demographic data.
 
 ## Street tree census
-This is a census done every 5 years which covers street trees. Trees on private propery and in park are not included.
+This is a census done by volunteers every 10 years which covers street trees. Trees on private propery and in park are not included.
+
+Various features are captured during the census outlining the type, health, size, location, and other metrics regarding the trees physical description.
 
 # Output
 Species level tree density clusters and four distinct resident opinion group clusters were identified. These were mapped and visualized using Tableau. The Tableau dashboard provides a convenient tool with which to interrogate the data. 
