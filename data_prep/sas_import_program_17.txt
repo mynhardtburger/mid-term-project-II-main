@@ -1,0 +1,1159 @@
+*2017 NYCHVS SAS IMPORT PRORGRAM;
+
+*OCCUPIED DATA FILE;
+data occupied17;  *NAME OF NEW DATASET*;   
+infile 'LOCATION OF TEXT FILE\uf_17_occ_web_b.txt' lrecl=1334 truncover;;
+input recid $1 @;
+if(recid='1') then
+do;                                           /* occupied */
+
+input	@1	recid	$1.
+	@2	boro	$1.
+	@4	uf1_1	$1.
+	@5	uf1_3	$1.
+	@6	uf1_4	$1.
+	@7	uf1_5	$1.
+	@8	uf1_6	$1.
+	@9	uf1_7	$1.
+	@10	uf1_8	$1.
+	@11	uf1_9	$1.
+	@12	uf1_10	$1.
+	@13	uf1_11	$1.
+	@14	uf1_12	$1.
+	@15	uf1_13	$1.
+	@16	uf1_14	$1.
+	@17	uf1_15	$1.
+	@18	uf1_16	$1.
+	@19	uf1_35	$1.
+	@20	uf1_17	$1.
+	@21	uf1_19	$1.
+	@22	uf1_20	$1.
+	@23	uf1_21	$1.
+	@24	uf1_22	$1.
+	@26	sc23	$1.
+	@27	sc24	$1.
+	@28	sc36	$1.
+	@29	sc37	$1.
+	@30	sc38	$1.
+	@33	hhr2	$1.
+	@34	hhr3t	$2.
+	@36	hhr5	$1.
+	@37	uf61	$2.
+	@60	uf2a_1	$1.
+	@61	uf79	$2.
+	@66	uf66	$4.
+	@70	sc54	$1.
+	@71	uf67	$2.
+	@73	sc111	$2.
+	@75	sc112	$2.
+	@77	sc113	$2.
+	@79	sc114	$1.
+	@80	sc115	$1.
+	@81	sc116	$1.
+	@82	sc117	$1.
+	@83	sc118	$1.
+	@88	sc120	$1.
+	@89	sc121	$1.
+	@98	uf5	$7.
+	@105	sc125	$1.
+	@106	uf6	$7.
+	@113	sc127	$1.
+	@120	uf68	$4.
+	@124	uf7a	$4.
+	@131	sc141	$1.
+	@132	sc144	$1.
+	@140	uf47	$2.
+	@142	sc147	$1.
+	@143	uf11	$2.
+	@147	sc149	$1.
+	@148	sc173	$1.
+	@149	sc171	$1.
+	@150	uf77	$2.
+	@152	uf78	$2.
+	@154	uf81	$1.
+	@155	uf82	$1.
+	@156	uf83	$1.
+	@158	sc157	$1.
+	@159	sc158	$1.
+	@160	sc159	$1.
+	@161	uf12	$4.
+	@165	sc161	$1.
+	@166	uf13	$4.
+	@170	uf14	$4.
+	@174	sc164	$1.
+	@175	uf15	$4.
+	@179	sc166	$1.
+	@180	uf16	$5.
+	@191	uf17	$5.
+	@196	sc181	$1.
+	@206	sc541	$1.
+	@207	uf107	$1.
+	@223	uf17a	$5.
+	@228	sc185	$1.
+	@229	sc186	$1.
+	@230	sc197	$1.
+	@236	sc187	$1.
+	@237	sc188	$1.
+	@238	sc571	$1.
+	@239	sc189	$1.
+	@240	sc190	$1.
+	@241	sc191	$1.
+	@242	sc192	$1.
+	@243	sc193	$1.
+	@244	sc194	$1.
+	@245	sc196	$1.
+	@246	uf108	$1.
+	@256	sc575	$1.
+	@257	uf72	$1.
+	@259	sc574	$1.
+	@260	sc198	$1.
+	@261	sc647	$1.
+	@262	sc648	$1.
+	@263	sc649	$1.
+	@264	sc650	$1.
+	@265	sc651	$1.
+	@266	sc131	$1.
+	@267	sc132	$1.
+	@268	sc136	$1.
+	@269	sc137	$1.
+	@270	sc138	$1.
+	@271	sc168	$1.
+	@272	sc169	$1.
+	@273	sc183	$1.
+	@274	sc560	$1.
+	@275	uf53	$4.
+	@279	uf54	$4.
+	@412	uf_csr	$2.
+	@414	uf74	$2.
+	@416	uf76	$2.
+	@419	uf23	$2.
+	@421	rec21	$1.
+	@422	uf71	$2.
+	@424	rec1	$2.
+	@426	uf46	$1.
+	@427	uf69	$1.
+	@428	uf60	$1.
+	@429	uf105	$6.
+	@438	rec54	$1.
+	@439	rec53	$1.
+	@440	tot_per	$2.
+	@442	cppr	$3.
+	@445	uf26	$5.
+	@450	uf28	$4.
+	@454	uf27	$4.
+	@458	rec39	$1.
+	@459	uf42	$7.
+	@466	uf42a	$1.
+	@467	uf34	$7.
+	@474	uf34a	$1.
+	@475	uf35	$7.
+	@482	uf35a	$1.
+	@483	uf36	$7.
+	@490	uf36a	$1.
+	@491	uf37	$7.
+	@498	uf37a	$1.
+	@499	uf38	$7.
+	@506	uf38a	$1.
+	@507	uf39	$7.
+	@514	uf39a	$1.
+	@515	uf40	$7.
+	@522	uf40a	$1.
+	@526	cd	$2.
+	@528	uf30	$4.
+	@532	uf29	$4.
+	@536	uf75	$1.
+	@537	rec7	$1.
+	@538	fw	$9.
+	@547	chufw	$9.
+	@556	seqno	$6.
+	@571	flg_sx1	$1.
+	@572	flg_ag1	$1.
+	@573	flg_hs1	$1.
+	@574	flg_rc1	$1.
+	@575	hflag2	$1.
+	@576	hflag1	$1.
+	@577	hflag13	$1.
+	@578	hflag6	$1.
+	@579	hflag3	$1.
+	@580	hflag14	$1.
+	@581	hflag16	$1.
+	@582	hflag7	$1.
+	@583	hflag9	$1.
+	@584	hflag10	$1.
+	@585	hflag91	$1.
+	@586	hflag11	$1.
+	@587	hflag12	$1.
+	@588	hflag4	$1.
+	@589	hflag18	$1.
+	@591	uf52h_h	$1.
+	@592	uf52h_a	$1.
+	@593	uf52h_b	$1.
+	@594	uf52h_c	$1.
+	@595	uf52h_d	$1.
+	@596	uf52h_e	$1.
+	@597	uf52h_f	$1.
+	@598	uf52h_g	$1.
+	@599	fw1	$9.
+	@608	fw2	$9.
+	@617	fw3	$9.
+	@626	fw4	$9.
+	@635	fw5	$9.
+	@644	fw6	$9.
+	@653	fw7	$9.
+	@662	fw8	$9.
+	@671	fw9	$9.
+	@680	fw10	$9.
+	@689	fw11	$9.
+	@698	fw12	$9.
+	@707	fw13	$9.
+	@716	fw14	$9.
+	@725	fw15	$9.
+	@734	fw16	$9.
+	@743	fw17	$9.
+	@752	fw18	$9.
+	@761	fw19	$9.
+	@770	fw20	$9.
+	@779	fw21	$9.
+	@788	fw22	$9.
+	@797	fw23	$9.
+	@806	fw24	$9.
+	@815	fw25	$9.
+	@824	fw26	$9.
+	@833	fw27	$9.
+	@842	fw28	$9.
+	@851	fw29	$9.
+	@860	fw30	$9.
+	@869	fw31	$9.
+	@878	fw32	$9.
+	@887	fw33	$9.
+	@896	fw34	$9.
+	@905	fw35	$9.
+	@914	fw36	$9.
+	@923	fw37	$9.
+	@932	fw38	$9.
+	@941	fw39	$9.
+	@950	fw40	$9.
+	@959	fw41	$9.
+	@968	fw42	$9.
+	@977	fw43	$9.
+	@986	fw44	$9.
+	@995	fw45	$9.
+	@1004	fw46	$9.
+	@1013	fw47	$9.
+	@1022	fw48	$9.
+	@1031	fw49	$9.
+	@1040	fw50	$9.
+	@1049	fw51	$9.
+	@1058	fw52	$9.
+	@1067	fw53	$9.
+	@1076	fw54	$9.
+	@1085	fw55	$9.
+	@1094	fw56	$9.
+	@1103	fw57	$9.
+	@1112	fw58	$9.
+	@1121	fw59	$9.
+	@1130	fw60	$9.
+	@1139	fw61	$9.
+	@1148	fw62	$9.
+	@1157	fw63	$9.
+	@1166	fw64	$9.
+	@1175	fw65	$9.
+	@1184	fw66	$9.
+	@1193	fw67	$9.
+	@1202	fw68	$9.
+	@1211	fw69	$9.
+	@1220	fw70	$9.
+	@1229	fw71	$9.
+	@1238	fw72	$9.
+	@1247	fw73	$9.
+	@1256	fw74	$9.
+	@1265	fw75	$9.
+	@1274	fw76	$9.
+	@1283	fw77	$9.
+	@1292	fw78	$9.
+	@1301	fw79	$9.
+	@1310	fw80	$9.
+	@1319	il30per	$5.
+	@1324	il50per	$5.
+	@1329	il80per	$5.;
+	end;
+
+
+label recid='Record Type';
+label boro='Borough';
+label uf1_1='External Walls--Missing brick and sloping walls';
+label uf1_3='External Walls--Major cracks in walls';
+label uf1_4='External Walls--Loose or hanging cornice';
+label uf1_5='External Walls--No problems';
+label uf1_6='External Walls--Unable to observe';
+label uf1_7='Condition of Windows--Broken/missing';
+label uf1_8='Condition of Windows--Rotten/loose';
+label uf1_9='Condition of Windows--Boarded-up';
+label uf1_10='Condition of Windows--No problems';
+label uf1_11='Condition of Windows--Unable to observe';
+label uf1_12='Condition of Stairways--Loose/broken railings';
+label uf1_13='Condition of Stairways--Loose/broken steps';
+label uf1_14='Condition of Stairways--No problems';
+label uf1_15='Condition of Stairways--No interior steps';
+label uf1_16='Condition of Stairways--No exterior steps';
+label uf1_35='Condition of Stairways--Unable to observe';
+label uf1_17='Condition of Floors--Sagging/sloping and slanted doors';
+label uf1_19='Condition of Floors--Deep wear';
+label uf1_20='Condition of Floors--Holes/missing flooring';
+label uf1_21='Condition of Floors--None of these problems';
+label uf1_22='Condition of Floors--Unable to observe';
+label sc23='Condition of building';
+label sc24='Broken/Boarded Windows--observation';
+label sc36='Wheelchair accessibility--Street entry';
+label sc37='Wheelchair accessibility--Elevator';
+label sc38='Wheelchair accessibility--Unit entrance';
+label hhr2='Sex of householder';
+label hhr3t='Age of householder';
+label hhr5='Hispanic origin';
+label uf61='Race of householder';
+label uf2a_1='Number of persons from temporary residence';
+label uf79='Most recent place lived';
+label uf66='Year Householder Moved into Unit Recode';
+label sc54='First occupants of unit';
+label uf67='Reason for moving';
+label sc111='Place of birth-householder';
+label sc112='Place of birth-father';
+label sc113='Place of birth-mother';
+label sc114='Coop/condo status';
+label sc115='Tenure(1)';
+label sc116='Tenure(2)';
+label sc117='Lived in unit at time of coop/condo conversion';
+label sc118='Coop/condo conv. through a non-eviction plan';
+label sc120='Occupancy status before acquisition';
+label sc121='Condo/Coop before acquisition';
+label uf5='Down payment(1)';
+label sc125='Down payment(2)';
+label uf6='Value';
+label sc127='Mortgage status';
+label uf68='When Did Most Recent Mortgage Originate';
+label uf7a='Current Interest Rate';
+label sc141='Fire and liability insurance paid separately';
+label sc144='Real estate taxes paid separately';
+label uf47='Units in building';
+label sc147='Owner in building';
+label uf11='Stories in building'; 
+label sc149='Elevator in building';
+label sc173='Sidewalk to elevator';
+label sc171='Sidewalk to unit';
+label uf77='Number of rooms';
+label uf78='Number of bedrooms';
+label uf81='Complete plumbing facilities';
+label uf82='Toilet breakdown';
+label uf83='Complete kitchen facilities';
+label sc157='Kitchen facilities functioning';
+label sc158='Type of heating fuel';
+label sc159='Electricity-paid separately';
+label uf12='Monthly electricity cost';
+label sc161='Gas-paid separately';
+label uf13='Monthly gas cost';
+label uf14='Combined gas/electricity';
+label sc164='Water and sewer-paid separately';
+label uf15='Yearly water and sewer cost';
+label sc166='Other fuels-paid separately';
+label uf16='Yearly cost for other fuels';
+label uf17='Contract rent';
+label sc181='Length of lease';
+label sc541='Federal section 8'; 
+label uf107='Other rental subsidy'; 
+label uf17a='Out of pocket rent';
+label sc185='Heating equipment breakdown';
+label sc186='Number of heating breakdowns';
+label sc197='Functioning Air Conditioning';
+label sc187='Additional sources of heat';
+label sc188='Presence of mice and rates';
+label sc571='Number of Cockroaches';
+label sc189='Exterminator service';
+label sc190='Cracks/holes in interior walls';
+label sc191='Holes in floors';
+label sc192='Broken plaster/peeling paint';
+label sc193='Plaster/paint> 8.5 x 11';
+label sc194='Water leakage';
+label sc196='Respondent rating of structures in neighborhood'; 
+label uf108='Receipt of public assistance or welfare payments'; 
+label sc575='Land-line Telephone in House';
+label uf72='Number of Adults with a cell phone';
+label sc574='General Health (respondent)';
+label sc198='Medical device in home';
+label sc647='Dental';
+label sc648='Preventative care/check-up';
+label sc649='Mental health';
+label sc650='Treatment or diagnosis of illness';
+label sc651='Prescription drugs';
+label sc131='One or more utility';
+label sc132='Landline telephone';
+label sc136='Cell phone';
+label sc137='Cable/internet';
+label sc138='Other';
+label sc168='Affordable';
+label sc169='Too expensive given its condition';
+label sc183='Too expensive given its location';
+label sc560='Moved to the US as immigrant';
+label uf53='Year moved to US as immigrant';
+label uf54='Year moved to NYC';
+label uf_csr='New control status recode';
+label uf74='Structure class recode';
+label uf76='Type of schedule code';
+label uf23='Year built recode';
+label rec21='Condition of unit recode';
+label uf71='Respondent line number';
+label rec1='Household composition recode';
+label uf46='Presence of nonrelatives';
+label uf69='Race and Ethnicity of householder';
+label uf60='Race Recode 1';
+label uf105='Monthly owner cost recode';
+label rec54='Number of 1987 maintenance deficiencies';
+label rec53='Number of 2017 maintenance deficiencies';
+label tot_per='Total persons recode';
+label cppr='Persons per room';
+label uf26='Monthly gross rent';
+label uf28='Monthly gross rent per room recode';
+label uf27='Monthly contract rent per room recode';
+label rec39='Household below poverty';
+label uf42='Household income recode';
+label uf42a='Household income flag';
+label uf34='Salary';
+label uf34a='Salary flag';
+label uf35='Business income';
+label uf35a='Business income flag';
+label uf36='Interest income';
+label uf36a='Interest income flag';
+label uf37='Retirement income (1)';
+label uf37a='Retirement income (1) flag';
+label uf38='Retirement income (2)';
+label uf38a='Retirement income (2) flag';
+label uf39='Government income';
+label uf39a='Government income flag';
+label uf40='Other income';
+label uf40a='Other income flag';
+label cd='Sub-borough area';
+label uf30='Gross rent/income ratio';
+label uf29='Contract rent/income ratio';
+label uf75='Household members under 6';
+label rec7='Household members under 18';
+label fw='Household weight';
+label chufw='Final household weight';
+label seqno='Sequence number';
+label flg_sx1='Sex of householder';
+label flg_ag1='Age of householder';
+label flg_hs1='Hispanic Origin';
+label flg_rc1='Race of householder';
+label hflag2='Year moved in flag';
+label hflag1='Year acquired flag';
+label hflag13='Value flag';
+label hflag6='Stories in building flag';
+label hflag3='Rooms/Bedrooms flag';
+label hflag14='Plumbing facilities flag';
+label hflag16='Kitchen facilities flag';
+label hflag7='Type of heating fuel flag';
+label hflag9='Electricity cost flag';
+label hflag10='Gas cost flag';
+label hflag91='Combined gas/electricity cost flag';
+label hflag11='Water and sewer cost flag';
+label hflag12='Other fuels cost flag';
+label hflag4='Contract rent flag';
+label hflag18='Rental assistance flag';
+label uf52h_h='Household income flag';
+label uf52h_a='Salary income flag';
+label uf52h_b='Business income flag';
+label uf52h_c='Interest income flag';
+label uf52h_d='Retirement income(1) flag';
+label uf52h_e='Government income flag';
+label uf52h_f='Retirement income(2) flag';
+label uf52h_g='Other income flag';
+label fw1='Replicate Weight #1'; 
+label fw2='Replicate Weight #2';
+label fw3='Replicate Weight #3';
+label fw4='Replicate Weight #4';
+label fw5='Replicate Weight #5';
+label fw6='Replicate Weight #6';
+label fw7='Replicate Weight #7';
+label fw8='Replicate Weight #8';
+label fw9='Replicate Weight #9';
+label fw10='Replicate Weight #10';
+label fw11='Replicate Weight #11';
+label fw12='Replicate Weight #12';
+label fw13='Replicate Weight #13';
+label fw14='Replicate Weight #14';
+label fw15='Replicate Weight #15';
+label fw16='Replicate Weight #16';
+label fw17='Replicate Weight #17';
+label fw18='Replicate Weight #18';
+label fw19='Replicate Weight #19';
+label fw20='Replicate Weight #20';
+label fw21='Replicate Weight #21';
+label fw22='Replicate Weight #22';
+label fw23='Replicate Weight #23';
+label fw24='Replicate Weight #24';
+label fw25='Replicate Weight #25';
+label fw26='Replicate Weight #26';
+label fw27='Replicate Weight #27';
+label fw28='Replicate Weight #28';
+label fw29='Replicate Weight #29';
+label fw30='Replicate Weight #30';
+label fw31='Replicate Weight #31';
+label fw32='Replicate Weight #32';
+label fw33='Replicate Weight #33';
+label fw34='Replicate Weight #34';
+label fw35='Replicate Weight #35';
+label fw36='Replicate Weight #36';
+label fw37='Replicate Weight #37';
+label fw38='Replicate Weight #38';
+label fw39='Replicate Weight #39';
+label fw40='Replicate Weight #40';
+label fw41='Replicate Weight #41';
+label fw42='Replicate Weight #42';
+label fw43='Replicate Weight #43';
+label fw44='Replicate Weight #44';
+label fw45='Replicate Weight #45';
+label fw46='Replicate Weight #46';
+label fw47='Replicate Weight #47';
+label fw48='Replicate Weight #48';
+label fw49='Replicate Weight #49';
+label fw50='Replicate Weight #50';
+label fw51='Replicate Weight #51';
+label fw52='Replicate Weight #52';
+label fw53='Replicate Weight #53';
+label fw54='Replicate Weight #54';
+label fw55='Replicate Weight #55';
+label fw56='Replicate Weight #56';
+label fw57='Replicate Weight #57';
+label fw58='Replicate Weight #58';
+label fw59='Replicate Weight #59';
+label fw60='Replicate Weight #60';
+label fw61='Replicate Weight #61';
+label fw62='Replicate Weight #62';
+label fw63='Replicate Weight #63';
+label fw64='Replicate Weight #64';
+label fw65='Replicate Weight #65';
+label fw66='Replicate Weight #66';
+label fw67='Replicate Weight #67';
+label fw68='Replicate Weight #68';
+label fw69='Replicate Weight #69';
+label fw70='Replicate Weight #70';
+label fw71='Replicate Weight #71';
+label fw72='Replicate Weight #72';
+label fw73='Replicate Weight #73';
+label fw74='Replicate Weight #74';
+label fw75='Replicate Weight #75';
+label fw76='Replicate Weight #76';
+label fw77='Replicate Weight #77';
+label fw78='Replicate Weight #78';
+label fw79='Replicate Weight #79';
+label fw80='Replicate Weight #80';
+label il30per='30% HUD Income Limits';
+label il50per='50% HUD Income Limits';
+label il80per='80% HUD Income Limits';
+run;
+
+
+
+data persons17;   *NAME OF NEW DATASET*;   
+infile 'LOCATION OF TEXT FILE\uf_17_pers_web_b.txt'  lrecl=898 truncover;
+input recid $1 @;
+if(recid='2') then
+do;                            /*person*/
+
+input	@1	recid	$1.
+	@2	boro	$1.
+	@3	person	$2.
+	@5	sex	$1.
+	@6	uf43	$2.
+	@8	uf92	$2.
+	@10	hspanic	$1.
+	@11	uf62	$2.
+	@33	uf86	$2.
+	@35	uf87	$2.
+	@37	uf88	$2.
+	@39	uf3	$1.
+	@40	item40a	$1.
+	@41	uf95	$2.
+	@43	item41	$1.
+	@44	item42	$1.
+	@45	uf89	$2.
+	@47	item44	$1.
+	@48	item45c	$1.
+	@57	uf90	$1.
+	@58	item48a	$2.
+	@60	uf96	$2.
+	@63	uf18	$7.
+	@70	uf18a	$7.
+	@77	uf18b	$7.
+	@84	uf18c	$7.
+	@91	uf18d	$7.
+	@98	uf18e	$7.
+	@105	uf18f	$7.
+	@113	item50a	$1.
+	@114	eductn	$2.
+	@116	uf55	$4.
+	@121	uf41	$7.
+	@128	uf41a	$1.
+	@129	uf44	$1.
+	@130	uf45	$1.
+	@131	uf59	$1.
+	@132	chk_g	$1.
+	@133	uf70	$1.
+	@134	uf60	$1.
+	@137	pw	$9.
+	@146	seqno	$6.
+	@152	cd	$2.
+	@154	flg_sx	$1.
+	@155	flg_ag	$1.
+	@156	flg_hs	$1.
+	@157	flg_rc	$1.
+	@158	a1a40a	$1.
+	@159	a1a40b	$1.
+	@160	a1a41	$1.
+	@161	a1a42	$1.
+	@162	a1a43	$1.
+	@163	a1b44	$1.
+	@164	a1b45c	$1.
+	@165	a1b46a	$1.
+	@166	a1b46b	$1.
+	@167	a1b47	$1.
+	@168	a1b48a	$1.
+	@169	a1b48b	$1.
+	@170	a2salary	$1.
+	@171	a2businc	$1.
+	@172	aintinc	$1.
+	@173	aret1inc	$1.
+	@174	agovtinc	$1.
+	@175	aret2inc	$1.
+	@176	aothinc	$1.
+	@177	flg_educ	$1.
+	@178	pw1	$9.
+	@187	pw2	$9.
+	@196	pw3	$9.
+	@205	pw4	$9.
+	@214	pw5	$9.
+	@223	pw6	$9.
+	@232	pw7	$9.
+	@241	pw8	$9.
+	@250	pw9	$9.
+	@259	pw10	$9.
+	@268	pw11	$9.
+	@277	pw12	$9.
+	@286	pw13	$9.
+	@295	pw14	$9.
+	@304	pw15	$9.
+	@313	pw16	$9.
+	@322	pw17	$9.
+	@331	pw18	$9.
+	@340	pw19	$9.
+	@349	pw20	$9.
+	@358	pw21	$9.
+	@367	pw22	$9.
+	@376	pw23	$9.
+	@385	pw24	$9.
+	@394	pw25	$9.
+	@403	pw26	$9.
+	@412	pw27	$9.
+	@421	pw28	$9.
+	@430	pw29	$9.
+	@439	pw30	$9.
+	@448	pw31	$9.
+	@457	pw32	$9.
+	@466	pw33	$9.
+	@475	pw34	$9.
+	@484	pw35	$9.
+	@493	pw36	$9.
+	@502	pw37	$9.
+	@511	pw38	$9.
+	@520	pw39	$9.
+	@529	pw40	$9.
+	@538	pw41	$9.
+	@547	pw42	$9.
+	@556	pw43	$9.
+	@565	pw44	$9.
+	@574	pw45	$9.
+	@583	pw46	$9.
+	@592	pw47	$9.
+	@601	pw48	$9.
+	@610	pw49	$9.
+	@619	pw50	$9.
+	@628	pw51	$9.
+	@637	pw52	$9.
+	@646	pw53	$9.
+	@655	pw54	$9.
+	@664	pw55	$9.
+	@673	pw56	$9.
+	@682	pw57	$9.
+	@691	pw58	$9.
+	@700	pw59	$9.
+	@709	pw60	$9.
+	@718	pw61	$9.
+	@727	pw62	$9.
+	@736	pw63	$9.
+	@745	pw64	$9.
+	@754	pw65	$9.
+	@763	pw66	$9.
+	@772	pw67	$9.
+	@781	pw68	$9.
+	@790	pw69	$9.
+	@799	pw70	$9.
+	@808	pw71	$9.
+	@817	pw72	$9.
+	@826	pw73	$9.
+	@835	pw74	$9.
+	@844	pw75	$9.
+	@853	pw76	$9.
+	@862	pw77	$9.
+	@871	pw78	$9.
+	@880	pw79	$9.
+	@889	pw80	$9.;
+	end;
+
+label recid='Record Type';
+label boro='Borough';
+label person='Person number';
+label sex='Sex';
+label uf43='Age';
+label uf92='Relationship to householder';
+label hspanic='Hispanic Origin';
+label uf62='Race';
+label uf86='Person number of Spouse';
+label uf87='Person number of 1st parent';
+label uf88='Person number of 2nd parent';
+label uf3='Person from temporary residence';
+label item40a='Worked last week';
+label uf95='Hours worked last week';
+label item41='Temporarily Absent/Layoff';
+label item42='Looking for work';
+label uf89='Reason not looking for work';
+label item44='Last time worked';
+label item45c='Major Industry type'; 
+label uf90='Type of worker';
+label item48a='Weeks worked in 2016';
+label uf96='Hours worked in 2016';
+label uf18='Salary income';
+label uf18a='Business income';
+label uf18b='Interest income';
+label uf18c='Retirement(1) income';
+label uf18d='Government income';
+label uf18e='Retirement(2) income';
+label uf18f='Other income';
+label item50a='Current Enrollment in Job Training/Education';
+label eductn='Educational Attainment';
+label uf55='Year non-householder moved into unit';
+label uf41='Total person income';
+label uf41a='Person income flag';
+label uf44='Business income loss flag';
+label uf45='Interest income loss flag';
+label uf59='Labor force status recode';
+label chk_g='Check item g';
+label uf70='Race and Ethnicity';
+label uf60='Race Recode 1';
+label pw='Person weight';
+label seqno='Sequence number';
+label cd='Sub-borough Area';
+label flg_sx='Sex allocation flag';
+label flg_ag='Age allocation flag';
+label flg_hs='Hispanic origin flag';
+label flg_rc='Race allocation flag';
+label a1a40a='Worked last week flag';
+label a1a40b='Hours worked last week flag';
+label a1a41='Temporary absent/layoff flag';
+label a1a42='Looking for work flag';
+label a1a43='Reason not looking flag';
+label a1b44='Last time worked flag';
+label a1b45c='Major industry type flag';
+label a1b46a='Industry flag';
+label a1b46b='Occupation flag';
+label a1b47='Type of worker flag';
+label a1b48a='Weeks worked in 2016 flag';
+label a1b48b='Hours worked in 2016 flag';
+label a2salary='Salary flag';
+label a2businc='Business income flag';
+label aintinc='Interest income flag';
+label aret1inc='Retirement(1) income flag';
+label agovtinc='Government income flag';
+label aret2inc='Retirement(2) income flag';
+label aothinc='Other income flag';
+label flg_educ='Education flag';
+label pw1='Replicate Weight #1';
+label pw2='Replicate Weight #2';
+label pw3='Replicate Weight #3';
+label pw4='Replicate Weight #4';
+label pw5='Replicate Weight #5';
+label pw6='Replicate Weight #6';
+label pw7='Replicate Weight #7';
+label pw8='Replicate Weight #8';
+label pw9='Replicate Weight #9';
+label pw10='Replicate Weight #10';
+label pw11='Replicate Weight #11';
+label pw12='Replicate Weight #12';
+label pw13='Replicate Weight #13';
+label pw14='Replicate Weight #14';
+label pw15='Replicate Weight #15';
+label pw16='Replicate Weight #16';
+label pw17='Replicate Weight #17';
+label pw18='Replicate Weight #18';
+label pw19='Replicate Weight #19';
+label pw20='Replicate Weight #20';
+label pw21='Replicate Weight #21';
+label pw22='Replicate Weight #22';
+label pw23='Replicate Weight #23';
+label pw24='Replicate Weight #24';
+label pw25='Replicate Weight #25';
+label pw26='Replicate Weight #26';
+label pw27='Replicate Weight #27';
+label pw28='Replicate Weight #28';
+label pw29='Replicate Weight #29';
+label pw30='Replicate Weight #30';
+label pw31='Replicate Weight #31';
+label pw32='Replicate Weight #32';
+label pw33='Replicate Weight #33';
+label pw34='Replicate Weight #34';
+label pw35='Replicate Weight #35';
+label pw36='Replicate Weight #36';
+label pw37='Replicate Weight #37';
+label pw38='Replicate Weight #38';
+label pw39='Replicate Weight #39';
+label pw40='Replicate Weight #40';
+label pw41='Replicate Weight #41';
+label pw42='Replicate Weight #42';
+label pw43='Replicate Weight #43';
+label pw44='Replicate Weight #44';
+label pw45='Replicate Weight #45';
+label pw46='Replicate Weight #46';
+label pw47='Replicate Weight #47';
+label pw48='Replicate Weight #48';
+label pw49='Replicate Weight #49';
+label pw50='Replicate Weight #50';
+label pw51='Replicate Weight #51';
+label pw52='Replicate Weight #52';
+label pw53='Replicate Weight #53';
+label pw54='Replicate Weight #54';
+label pw55='Replicate Weight #55';
+label pw56='Replicate Weight #56';
+label pw57='Replicate Weight #57';
+label pw58='Replicate Weight #58';
+label pw59='Replicate Weight #59';
+label pw60='Replicate Weight #60';
+label pw61='Replicate Weight #61';
+label pw62='Replicate Weight #62';
+label pw63='Replicate Weight #63';
+label pw64='Replicate Weight #64';
+label pw65='Replicate Weight #65';
+label pw66='Replicate Weight #66';
+label pw67='Replicate Weight #67';
+label pw68='Replicate Weight #68';
+label pw69='Replicate Weight #69';
+label pw70='Replicate Weight #70';
+label pw71='Replicate Weight #71';
+label pw72='Replicate Weight #72';
+label pw73='Replicate Weight #73';
+label pw74='Replicate Weight #74';
+label pw75='Replicate Weight #75';
+label pw76='Replicate Weight #76';
+label pw77='Replicate Weight #77';
+label pw78='Replicate Weight #78';
+label pw79='Replicate Weight #79';
+label pw80='Replicate Weight #80';
+run;
+
+
+
+*VACANT DATA FILE;
+data vacant17;  *NAME OF NEW DATASET*;  
+infile 'LOCATION OF TEXT FILE\uf_17_repwgt_vac_web.txt' lrecl=824 truncover; 
+input recid $1 @;
+if(recid='3') then
+do;                                 /* vacant */ 
+
+
+input	@1	recid	$1.
+	@2	boro	$1.
+	@4	uf1_1	$1.
+	@5	uf1_3	$1.
+	@6	uf1_4	$1.
+	@7	uf1_5	$1.
+	@8	uf1_6	$1.
+	@9	uf1_7	$1.
+	@10	uf1_8	$1.
+	@11	uf1_9	$1.
+	@12	uf1_10	$1.
+	@13	uf1_11	$1.
+	@14	uf1_12	$1.
+	@15	uf1_13	$1.
+	@16	uf1_14	$1.
+	@17	uf1_15	$1.
+	@18	uf1_16	$1.
+	@19	uf1_35	$1.
+	@20	uf1_17	$1.
+	@21	uf1_19	$1.
+	@22	uf1_20	$1.
+	@23	uf1_21	$1.
+	@24	uf1_22	$1.
+	@26	sc23	$1.
+	@27	sc24	$1.
+	@28	sc36	$1.
+	@29	sc37	$1.
+	@30	sc38	$1.
+	@31	sc30	$1.
+	@32	sc518	$1.
+	@33	uf47	$2.
+	@35	sc520	$1.
+	@36	uf33	$2.
+	@40	sc522	$1.
+	@41	sc553	$1.
+	@42	sc555	$1.
+	@43	uf77	$2.
+	@45	uf78	$2.
+	@47	uf81	$1.
+	@48	uf83	$1.
+	@49	sc529	$1.
+	@50	sc530	$1.
+	@51	sc531	$1.
+	@52	sc532	$1.
+	@53	sc533	$1.
+	@54	sc534	$1.
+	@55	uf80	$2.
+	@57	uf31	$5.
+	@68	uf_csr	$2.
+	@70	uf74	$2.
+	@72	uf76	$2.
+	@74	uf23	$2.
+	@76	uf32	$4.
+	@80	rec21	$1.
+	@81	cd	$2.
+	@83	seqno	$6.
+	@89	fw	$9.
+	@98	hflag6	$1.
+	@99	hflag3	$1.
+	@100	hflag15	$1.
+	@101	hflag17	$1.
+	@102	hflag8	$1.
+	@103	hflag5	$1.
+	@104	fw1	$9.
+	@113	fw2	$9.
+	@122	fw3	$9.
+	@131	fw4	$9.
+	@140	fw5	$9.
+	@149	fw6	$9.
+	@158	fw7	$9.
+	@167	fw8	$9.
+	@176	fw9	$9.
+	@185	fw10	$9.
+	@194	fw11	$9.
+	@203	fw12	$9.
+	@212	fw13	$9.
+	@221	fw14	$9.
+	@230	fw15	$9.
+	@239	fw16	$9.
+	@248	fw17	$9.
+	@257	fw18	$9.
+	@266	fw19	$9.
+	@275	fw20	$9.
+	@284	fw21	$9.
+	@293	fw22	$9.
+	@302	fw23	$9.
+	@311	fw24	$9.
+	@320	fw25	$9.
+	@329	fw26	$9.
+	@338	fw27	$9.
+	@347	fw28	$9.
+	@356	fw29	$9.
+	@365	fw30	$9.
+	@374	fw31	$9.
+	@383	fw32	$9.
+	@392	fw33	$9.
+	@401	fw34	$9.
+	@410	fw35	$9.
+	@419	fw36	$9.
+	@428	fw37	$9.
+	@437	fw38	$9.
+	@446	fw39	$9.
+	@455	fw40	$9.
+	@464	fw41	$9.
+	@473	fw42	$9.
+	@482	fw43	$9.
+	@491	fw44	$9.
+	@500	fw45	$9.
+	@509	fw46	$9.
+	@518	fw47	$9.
+	@527	fw48	$9.
+	@536	fw49	$9.
+	@545	fw50	$9.
+	@554	fw51	$9.
+	@563	fw52	$9.
+	@572	fw53	$9.
+	@581	fw54	$9.
+	@590	fw55	$9.
+	@599	fw56	$9.
+	@608	fw57	$9.
+	@617	fw58	$9.
+	@626	fw59	$9.
+	@635	fw60	$9.
+	@644	fw61	$9.
+	@653	fw62	$9.
+	@662	fw63	$9.
+	@671	fw64	$9.
+	@680	fw65	$9.
+	@689	fw66	$9.
+	@698	fw67	$9.
+	@707	fw68	$9.
+	@716	fw69	$9.
+	@725	fw70	$9.
+	@734	fw71	$9.
+	@743	fw72	$9.
+	@752	fw73	$9.
+	@761	fw74	$9.
+	@770	fw75	$9.
+	@779	fw76	$9.
+	@788	fw77	$9.
+	@797	fw78	$9.
+	@806	fw79	$9.
+	@815	fw80	$9.;
+	end;
+
+
+label recid='Record Type';
+label boro='Borough';
+label uf1_1='External Walls--Missing brick and sloping walls';
+label uf1_3='External Walls--Major cracks in walls';
+label uf1_4='External Walls--Loose or hanging cornice';
+label uf1_5='External Walls--No problems';
+label uf1_6='External Walls--Unable to observe';
+label uf1_7='Condition of Windows--Broken/missing';
+label uf1_8='Condition of Windows--Rotten/loose';
+label uf1_9='Condition of Windows--Boarded-up';
+label uf1_10='Condition of Windows--No problems';
+label uf1_11='Condition of Windows--Unable to observe';
+label uf1_12='Condition of Stairways--Loose/broken railings';
+label uf1_13='Condition of Stairways--Loose/broken steps';
+label uf1_14='Condition of Stairways--No problems';
+label uf1_15='Condition of Stairways--No interior steps';
+label uf1_16='Condition of Stairways--No exterior steps';
+label uf1_35='Condition of Stairways--Unable to observe';
+label uf1_17='Condition of Floors--Sagging/sloping and slanted doors';
+label uf1_19='Condition of Floors--Deep wear';
+label uf1_20='Condition of Floors--Holes/missing flooring';
+label uf1_21='Condition of Floors--None of these problems';
+label uf1_22='Condition of Floors--Unable to observe';
+label sc23='Condition of building';
+label sc24='Broken/Boarded Windows--observation';
+label sc36='Wheelchair accessibility--Street entry';
+label sc37='Wheelchair accessibility--Elevator';
+label sc38='Wheelchair accessibility--Unit entrance';
+label sc30='Vacant unit respondent';
+label sc518='First occupancy';
+label uf47='Number of units in building';
+label sc520='Owner in building';
+label uf33='Stories in building'; 
+label sc522='Elevator in building';
+label sc553='Sidewalk to elevator';
+label sc555='Sidewalk to unit';
+label uf77='Number of Rooms';
+label uf78='Number of Bedrooms';
+label uf81='Complete plumbing facilities';
+label uf83='Kitchen facilities';
+label sc529='Type of Heating Fuel';
+label sc530='Condo/Coop Status';
+label sc531='Duration of Vacancy';
+label sc532='Status Prior to Vacancy';
+label sc533='Condo/Coop Status Before Vacancy';
+label sc534='Status of Vacant Unit';
+label uf80='Reason Unit Not Available for Rent/Sale';
+label uf31='Monthly Asking Rent';
+label uf_csr='New Control Status Recode';
+label uf74='Structure Class Recode';
+label uf76='Type of Schedule';
+label uf23='Year Built Recode';
+label uf32='Rent per Room Recode';
+label rec21='Condition of Building';
+label cd='Sub-borough Area';
+label seqno='Sequence Number';
+label fw='Final Housing Unit Weight';
+label hflag6='Stories in building flag';
+label hflag3='Rooms/Bedrooms flag';
+label hflag15='Complete plumbing facilities flag';
+label hflag17='Complete kitchen facilities flag';
+label hflag8='Type of heating fuel flag';
+label hflag5='Monthly asking rent flag';
+label fw1='Replicate Weight #1';
+label fw2='Replicate Weight #2';
+label fw3='Replicate Weight #3';
+label fw4='Replicate Weight #4';
+label fw5='Replicate Weight #5';
+label fw6='Replicate Weight #6';
+label fw7='Replicate Weight #7';
+label fw8='Replicate Weight #8';
+label fw9='Replicate Weight #9';
+label fw10='Replicate Weight #10';
+label fw11='Replicate Weight #11';
+label fw12='Replicate Weight #12';
+label fw13='Replicate Weight #13';
+label fw14='Replicate Weight #14';
+label fw15='Replicate Weight #15';
+label fw16='Replicate Weight #16';
+label fw17='Replicate Weight #17';
+label fw18='Replicate Weight #18';
+label fw19='Replicate Weight #19';
+label fw20='Replicate Weight #20';
+label fw21='Replicate Weight #21';
+label fw22='Replicate Weight #22';
+label fw23='Replicate Weight #23';
+label fw24='Replicate Weight #24';
+label fw25='Replicate Weight #25';
+label fw26='Replicate Weight #26';
+label fw27='Replicate Weight #27';
+label fw28='Replicate Weight #28';
+label fw29='Replicate Weight #29';
+label fw30='Replicate Weight #30';
+label fw31='Replicate Weight #31';
+label fw32='Replicate Weight #32';
+label fw33='Replicate Weight #33';
+label fw34='Replicate Weight #34';
+label fw35='Replicate Weight #35';
+label fw36='Replicate Weight #36';
+label fw37='Replicate Weight #37';
+label fw38='Replicate Weight #38';
+label fw39='Replicate Weight #39';
+label fw40='Replicate Weight #40';
+label fw41='Replicate Weight #41';
+label fw42='Replicate Weight #42';
+label fw43='Replicate Weight #43';
+label fw44='Replicate Weight #44';
+label fw45='Replicate Weight #45';
+label fw46='Replicate Weight #46';
+label fw47='Replicate Weight #47';
+label fw48='Replicate Weight #48';
+label fw49='Replicate Weight #49';
+label fw50='Replicate Weight #50';
+label fw51='Replicate Weight #51';
+label fw52='Replicate Weight #52';
+label fw53='Replicate Weight #53';
+label fw54='Replicate Weight #54';
+label fw55='Replicate Weight #55';
+label fw56='Replicate Weight #56';
+label fw57='Replicate Weight #57';
+label fw58='Replicate Weight #58';
+label fw59='Replicate Weight #59';
+label fw60='Replicate Weight #60';
+label fw61='Replicate Weight #61';
+label fw62='Replicate Weight #62';
+label fw63='Replicate Weight #63';
+label fw64='Replicate Weight #64';
+label fw65='Replicate Weight #65';
+label fw66='Replicate Weight #66';
+label fw67='Replicate Weight #67';
+label fw68='Replicate Weight #68';
+label fw69='Replicate Weight #69';
+label fw70='Replicate Weight #70';
+label fw71='Replicate Weight #71';
+label fw72='Replicate Weight #72';
+label fw73='Replicate Weight #73';
+label fw74='Replicate Weight #74';
+label fw75='Replicate Weight #75';
+label fw76='Replicate Weight #76';
+label fw77='Replicate Weight #77';
+label fw78='Replicate Weight #78';
+label fw79='Replicate Weight #79';
+label fw80='Replicate Weight #80';
+run;
+
